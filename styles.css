@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #colorPicker {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+  }
+  
+  .colorBox {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  #selectedColor {
+    margin-top: 20px;
+  }
+  
+  #currentColor {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  #enterColor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  #error {
+    color: red;
+    margin: 0;
+  }
+
+  button{
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+  }

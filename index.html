@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="colorPicker"></div>
+  <div id="selectedColor">Selected Color: <span id="currentColor"></span></div>
+  <div id="enterColor">
+      <label for="colorCode">Enter Color Code:</label>
+      <input type="text" autocapitalize="charset" id="colorCode" placeholder="#RRGGBB OR #RGB" />
+      <p id="error"></p>
+      <button onclick="enterColor()">Select</button>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
