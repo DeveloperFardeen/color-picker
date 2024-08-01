@@ -4,8 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentColor = document.getElementById('currentColor');
     const colorCodeInput = document.getElementById('colorCode');
     const error = document.getElementById('error');
+    function generateRandomColor() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+  }
   
-    const colors = [
+  function addColorsToArray(array, numberOfColors) {
+      for (let i = 0; i < numberOfColors; i++) {
+          array.push(generateRandomColor());
+      }
+  }
+  
+  const colors = [
       '#FF0000', '#FF7F00', '#FFFF00', '#7FFF00', '#00FF00',
       '#00FF7F', '#00FFFF', '#007FFF', '#0000FF', '#7F00FF',
       '#FF00FF', '#FF007F', '#000000', '#808080', '#C0C0C0',
@@ -20,7 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
       '#FFAB00', '#F3B347', '#FE607A', '#FFD3B9', '#EEE82E',
       '#485739', '#E829E2', '#B392F3', '#AA29B2'
       // ... add more colors as needed
-    ];
+  ];
+  
+  addColorsToArray(colors, 10); // Add 10 random colors
+  
+  console.log(colors);
   
     // Populate color picker
     colors.forEach(color => {
